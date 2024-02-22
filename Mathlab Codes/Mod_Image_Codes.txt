@@ -1,0 +1,28 @@
+%--------------Modified Clock Image-----------------
+% Read the data from the file
+fid = fopen('Mod_Clock_output.dat', 'r');
+data = fscanf(fid, '%x');
+fclose(fid);
+% Reshape the data into a 128x128 matrix
+image_data = reshape(data, 128, 128);
+%Take the transpose of the image
+TransposeIm_Mod = image_data';
+
+% Display the image
+imshow(TransposeIm_Mod, [])
+title('Mod Image'); 
+
+
+%--------------Modified Moon Image-----------------
+% Read the data from the file
+fid = fopen('Mod_Moon_output.dat', 'r');
+data = fscanf(fid, '%x');
+fclose(fid);
+% Reshape the data into a 128x128 matrix
+image_data = reshape(data, 128, 128);
+%Take the transpose of the image
+TransposeIm_Mod = image_data';
+
+% Display the image
+imshow(TransposeIm_Mod, [])
+title('Mod Image'); 
